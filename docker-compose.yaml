@@ -1,0 +1,10 @@
+version: '3'
+networks:
+  mqttNetwork:
+    driver: bridge
+
+
+services:
+  mqtt:
+    image: eclipse-mosquitto:latest
+    
