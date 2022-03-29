@@ -1,0 +1,4 @@
+#Ignore release documents, ie - readme
+./README.md
+#ignore local enviroment
+./venv
