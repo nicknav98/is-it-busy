@@ -81,9 +81,6 @@ The default port is 1883 and the script is written so ports and ip's are configu
 Using MQTT X: https://mqttx.app/ , you can subscribe to the board using hostname: localhost, and port: 1883. The script uses a default path of `home/mac`. Again this is configurable in the script, and each node can have different boards to publish to, for example: `mainlibrary/area1`. If you would like to run MQTT.X on a different device altogether, be sure you use the docker container's device IP. 
 
 
-
-You can rename the current file by clicking the file name in the navigation bar or by clicking the **Rename** button in the file explorer.
-
 ## Running Examples
 - Gifs
 - Images
