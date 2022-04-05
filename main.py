@@ -14,11 +14,11 @@ parser.add_argument('--host', default = 0)
 parser.add_argument('--port', default = 0)
 parser.add_argument('--sub', default = "home/mac")
 parser.add_argument('--sleeptime', type=int, default = 30)
-
+parser.add_argument('--roomname', default="Room")
 args = parser.parse_args()
 # drop on invalid input
 if args.host==0 or args.port==0:
-        print("Wrong Input")
+        print("No arguments were set, script failed to initialize.")
 else:
         print(args.host, args.port, args.sub, args.sleeptime)
 
@@ -34,7 +34,7 @@ else:
                 pplnumber = str(len(resultList) - 1)
 
 
-                publish.single(args.sub, pplnumber + " People Are Currently in Embedded Lab", hostname=args.host, port=args.port)
+                publish.single(args.sub, pplnumber + " People Are Currently in " + args.roomname, hostname=args.host, port=args.port)
 
         def keepRunning():
                 func()
