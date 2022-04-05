@@ -10,7 +10,7 @@ This package allows end-users to run a sniffing node in their WIFI-networks to e
 ## Contributors
 
 - [@Nicholas Navarro](https://www.github.com/nicknav98) - Student at Turku AMK
-- [@Michalis Iona](https://www.github.com/MikeByBike) - Student at Turku AMK with a degree at Beng Information and Communication Technology
+- [@Michalis Iona](https://www.github.com/MikeByBike) - Student at Turku AMK
 - [@Georgi Georgiev](https://www.github.com/GeorgiRG) - Student at Turku AMK
 
 ## Pre-requisites 
