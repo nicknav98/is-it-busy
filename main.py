@@ -1,30 +1,46 @@
+import argparse
 import subprocess
 from time import sleep
 import paho.mqtt.publish as publish
 import re
 INTERFACE = 'wlan0'
 
-MQTT_HOST = "172.27.227.5"
-MQTT_PORT = "1883"
+#MQTT_HOST = ""
+#MQTT_PORT = ""
+
+# parser arguments
+parser = argparse.ArgumentParser(description='is-it-busy')
+parser.add_argument('--host', default = 0)
+parser.add_argument('--port', default = 0)
+parser.add_argument('--sub', default = "home/mac")
+parser.add_argument('--sleeptime', type=int, default = 30)
+
+args = parser.parse_args()
+# drop on invalid input
+if args.host==0 or args.port==0:
+        print("Wrong Input")
+else:
+        print(args.host, args.port, args.sub, args.sleeptime)
 
 
+        def func():
+                output = subprocess.check_output("sudo arp-scan --interface=" + INTERFACE + " --localnet" + " | awk '/.*:.*:.*:.*:.*:.*/{print $2}'", shell=True)
+                print(output)
+                f = open("output.txt", "a")
+                f.write(output)
+                resultList = output.split("\n")
+                print "\n",resultList[1:], len(resultList)-1
+                f.close()
+                pplnumber = str(len(resultList) - 1)
 
-def func():
-	output = subprocess.check_output("sudo arp-scan --interface=" + INTERFACE + " --localnet" + " | awk '/.*:.*:.*:.*:.*:.*/{print $2}'", shell=True)
-	print(output)
-	f = open("output.txt", "a")
-	f.write(output)
-	resultList = output.split("\n")
-	print "\n",resultList[1:], len(resultList)-1
-	f.close()
-	pplnumber = str(len(resultList) - 1)
+
+                publish.single(args.sub, pplnumber + " People Are Currently in Embedded Lab", hostname=args.host, port=args.port)
+
+        def keepRunning():
+                func()
+                sleep(args.sleeptime)
+                keepRunning()
+        func()
+        keepRunning()
 
 
-	publish.single("home/mac", pplnumber + " People Are Currently in Embedded Lab", hostname=MQTT_HOST, port=MQTT_PORT)
-
-def keepRunning():
-	func()
-	sleep(30)
-	keepRunning()
-
-keepRunning()
