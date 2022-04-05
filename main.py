@@ -20,7 +20,7 @@ args = parser.parse_args()
 if args.host==0 or args.port==0:
         print("No arguments were set, script failed to initialize.")
 else:
-        print(args.host, args.port, args.sub, args.sleeptime)
+        print(args.host, args.port, args.sub, args.sleeptime, args.roomname)
 
 
         def func():
