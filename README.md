@@ -62,7 +62,7 @@ Now your node is ready to be launched. Before deploying this into your target ne
     sudo arp-scan [DEVICE IP ADDRESS]
 
 You should get a response like the following: 
-![](https://ibb.co/YBjg8Dj)
+![](https://i.ibb.co/B2skj4s/ARP-Scan-Screenshot-3.webp)
 
 ## If Arp-Scan is not installed on your distribution
 
@@ -96,7 +96,7 @@ Flags can be used in combination with main.py. Table of flags and their defaults
 | --sleeptime| |'30'| ------ Time in seconds, reability of the script
 |--roomname |'Room'| ---- Room name, this is printed in the published message
 
-![Flags examples](https://i.ibb.co/B2skj4s/ARP-Scan-Screenshot-3.webp)
+![Flags examples](https://i.ibb.co/yYRDvSV/Pic2.png)
 
 ## FOR YOUR DEVICE RUNNING THE CONTAINER DO THE FOLLOWING: 
 
@@ -114,13 +114,13 @@ The default port is 1883 and the script is written so ports and ip's are configu
 
 Using MQTT X: https://mqttx.app/ , you can subscribe to the board using hostname: localhost, and port: 1883. The script uses a default path of `home/mac`. Again this is configurable in the script, and each node can have different boards to publish to, for example: `mainlibrary/area1`. If you would like to run MQTT.X on a different device altogether, be sure you use the docker container's device IP. 
 
-![MQTT Server](https://i.ibb.co/B2skj4s/ARP-Scan-Screenshot-3.webp)
+![MQTT Server](https://i.ibb.co/7t5nqTj/Working-Messages.png)
 
 
 ## If you wish to host a container and a separate physical location, or you are running the container in a cloud platform
 
 Be sure that port-forwarding is enabled on your system's router if you are running the container on a private network, this will allow communication to the Docker container remotely. When setting up port-forwarding on your router's config page: (Usually 192.168.1.1), be sure to select the device running your docker container as the destination IP. by default 1883 is the configured port for MQTT. 
 
-![Example Port Forwarding Rule](https://ibb.co/qCCQhsn)
+![Example Port Forwarding Rule](https://i.ibb.co/9hh5BTv/Port-Forwarding.png)
 
 
