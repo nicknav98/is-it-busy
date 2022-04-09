@@ -96,7 +96,7 @@ Flags can be used in combination with main.py. Table of flags and their defaults
 | --sleeptime| |'30'| ------ Time in seconds, reability of the script
 |--roomname |'Room'| ---- Room name, this is printed in the published message
 
-![Flags examples](https://ibb.co/YBjg8Dj)
+![Flags examples](https://i.ibb.co/B2skj4s/ARP-Scan-Screenshot-3.webp)
 
 ## FOR YOUR DEVICE RUNNING THE CONTAINER DO THE FOLLOWING: 
 
@@ -114,7 +114,7 @@ The default port is 1883 and the script is written so ports and ip's are configu
 
 Using MQTT X: https://mqttx.app/ , you can subscribe to the board using hostname: localhost, and port: 1883. The script uses a default path of `home/mac`. Again this is configurable in the script, and each node can have different boards to publish to, for example: `mainlibrary/area1`. If you would like to run MQTT.X on a different device altogether, be sure you use the docker container's device IP. 
 
-![MQTT Server](https://ibb.co/47WjjtQ)
+![MQTT Server](https://i.ibb.co/B2skj4s/ARP-Scan-Screenshot-3.webp)
 
 
 ## If you wish to host a container and a separate physical location, or you are running the container in a cloud platform
