@@ -89,13 +89,13 @@ Run the script by typing:
 
 Flags can be used in combination with main.py. Table of flags and their defaults are listed as: 
 
-|Flag                   |Default                                                              | Meaning                                                 |
-|   ----------          |------                                                               |
-|   --host              |'localhost'                                                          | ----- Host IP                                           |
-|   --port              | '1883'                                                              | ----- Port Number                                       |
-|   --sub               |'home/mac'                                                           | ----- MQTT Publish Root                                 |
-|sleeptime              |'30'                                                                 | ------ Time in seconds, reability of the script         |
-|roomname               |'Room'                                                               | ---- Room name, this is printed in the published message|
+|   Flag          |Default          |  Meaning                                                  |
+|   ----------    | -------         | ------                                                    |
+|   --host        | 'localhost'     |  Host IP                                                  |
+|   --port        | '1883'          |  Port Number                                              |
+|   --sub         | 'home/mac'      | MQTT Publish Root                                         |
+|   --sleeptime   | '30'            |  Time in seconds, reability of the script                 |
+|   --roomname    | 'Room'          |  Room name, this is printed in the published message      |
 
 ![Flags examples](https://i.ibb.co/yYRDvSV/Pic2.png)
 
